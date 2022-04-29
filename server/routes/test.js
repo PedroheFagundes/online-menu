@@ -1,4 +1,8 @@
+const express = require("express");
+const router = express.Router()
 
-app.get("/api", (req, res) => {
-    res.json({ message: "Hello from server!" });
+router.get('/api', (req, res) => {
+    res.send("Hello from server!");
   });
+
+  module.exports = router;
