@@ -2,7 +2,9 @@ import type { NextPage } from 'next'
 
 const Home: NextPage = () => {
   return (
-    <h1>Online Menu teste heroku deploy 3</h1>
+    <div className='container-fluid align-items-center p-0 w414 h80 bg-secondary'>
+      teste
+    </div>
   )
 }
 

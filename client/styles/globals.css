@@ -2,15 +2,45 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+#__next {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
 }
 
 * {
   box-sizing: border-box;
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input, textarea {
+  border: none;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+/* Heights */
+.h80 {
+  height: 80px;
+}
+
+/* Widths */
+.w100vw {
+  width: 100vw;
+}
+
+.w414 {
+  width: 414px;
+  max-width: 414px;
 }
