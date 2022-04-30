@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
+
 html,
 body {
   padding: 0;
@@ -30,9 +33,29 @@ input, textarea {
   -webkit-appearance: none;
 }
 
+/* Fonts */
+.font-pacifico {
+  font-family: 'Pacifico', cursive;
+}
+
+.font-inknut {
+  font-family: 'Inknut Antiqua', serif;
+}
+
+/* Font Size */
+.fs40{
+  font-size: 40px;
+}
+
+/* Backgrounds */
 .bg {
   background-image: url("/bg.png");
   background-position: top;
+}
+
+.bg-center {
+  background-size: cover;
+  background-position: center;
 }
 
 /* Colors */
@@ -43,6 +66,10 @@ input, textarea {
 /* Heights */
 .h100vh {
   height: calc(100vh - 55px);
+}
+
+.h20pc {
+  height: 20%;
 }
 
 .h100pc {
@@ -61,6 +88,10 @@ input, textarea {
   height: 55px;
 }
 
+.h100 {
+  height: 100px;
+}
+
 /* Widths */
 .w100vw {
   width: 100vw;
@@ -76,8 +107,24 @@ input, textarea {
   max-width: 152px;
 }
 
+.w300 {
+  width: 300px;
+  max-width: 300px;
+}
+
 .w414 {
   width: 414px;
   max-width: 414px;
 }
 
+/* Borders */
+
+.rounded10 {
+  border-radius: 10px;
+}
+
+/* Especific */
+
+.htotal {
+  height: calc(100% - 155px);
+}
