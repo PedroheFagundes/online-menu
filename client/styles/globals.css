@@ -32,7 +32,7 @@ input, textarea {
 
 .bg {
   background-image: url("/bg.png");
-  background-position: initial;
+  background-position: top;
 }
 
 /* Colors */
