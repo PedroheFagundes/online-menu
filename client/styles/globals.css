@@ -30,9 +30,31 @@ input, textarea {
   -webkit-appearance: none;
 }
 
+.bg {
+  background-image: url("/bg.png");
+  background-position: initial;
+}
+
+/* Colors */
+.bg-standart-dark {
+  background-color: #373737;
+}
+
 /* Heights */
-.h80 {
-  height: 80px;
+.h100vh {
+  height: calc(100vh - 55px);
+}
+
+.h7 {
+  height: 7px;
+}
+
+.h40 {
+  height: 40px;
+}
+
+.h55 {
+  height: 55px;
 }
 
 /* Widths */
@@ -40,7 +62,18 @@ input, textarea {
   width: 100vw;
 }
 
+.w40 {
+  width: 40px;
+  max-width: 40px;
+}
+
+.w152 {
+  width: 152px;
+  max-width: 152px;
+}
+
 .w414 {
   width: 414px;
   max-width: 414px;
 }
+
