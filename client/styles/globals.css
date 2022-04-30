@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&display=swap');
 
 html,
@@ -34,12 +34,13 @@ input, textarea {
 }
 
 /* Fonts */
-.font-pacifico {
-  font-family: 'Pacifico', cursive;
+.font-satisfy {
+  font-family: 'Satisfy', cursive;
 }
 
 .font-inknut {
   font-family: 'Inknut Antiqua', serif;
+  overflow: hidden;
 }
 
 /* Font Size */
@@ -105,6 +106,11 @@ input, textarea {
 .w152 {
   width: 152px;
   max-width: 152px;
+}
+
+.w170 {
+  width: 170px;
+  max-width: 170px;
 }
 
 .w300 {
