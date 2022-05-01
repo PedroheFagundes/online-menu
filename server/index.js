@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 // const pool = require("./db");
-const teste = require('./routes/test')
+const products = require('./routes/products')
 
 
 const app = express();
@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/test', teste);
+app.use('/products', products);
 
 //Estabilishing the port
 const PORT = process.env.PORT || 5000;
