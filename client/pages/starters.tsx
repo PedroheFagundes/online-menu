@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react';
 const Starters: NextPage = () => {
 
   const [products, setProducts] = useState([]);
-  const [productsLoaded, setProductsLoaded] = useState(true);
 
 
   const getProducts = async () => {
@@ -15,7 +14,6 @@ const Starters: NextPage = () => {
       const jsonData = await response.json();
 
       setProducts(jsonData);
-      setProductsLoaded(false);
     } catch (err: any) {
       console.error(err.message);
     }
@@ -25,6 +23,7 @@ const Starters: NextPage = () => {
     getProducts();
   }, []);
 
+  console.log(products)
   return (
     <div className='container-fluid p-0 position-fixed d-flex justify-content-center || bg w414 h100pc'>
       <div className="col-10 d-flex flex-column || w414 h100pc">
