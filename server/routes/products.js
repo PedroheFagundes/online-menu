@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router()
 
-router.get('/get', (req, res) => {
+router.get('/get', async (req, res) => {
   try {
     const allProducts = await pool.query(`
       SELECT
