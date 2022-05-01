@@ -32,7 +32,7 @@ const NavBar: NextPage = () => {
                 />
             </div>
             </Link>
-            <div onClick={() => toggleNavBar()} className='m-0 d-flex row || w40 h40'><div className='bg-white rounded mt-1 || h7'></div><div className='bg-white rounded || h7'></div><div className='bg-white rounded || h7'></div></div>
+            <div onClick={() => toggleNavBar()} className='m-0 d-flex row || w40 h40'><div className='bg-standart rounded mt-1 || h7'></div><div className='bg-standart rounded || h7'></div><div className='bg-standart rounded || h7'></div></div>
         </div>
     </div>
   )

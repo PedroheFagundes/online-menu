@@ -64,6 +64,10 @@ input, textarea {
   background-color: #373737;
 }
 
+.bg-standart {
+  background-color: #FFD600;
+}
+
 /* Heights */
 .h100vh {
   height: calc(100vh - 55px);
@@ -133,4 +137,11 @@ input, textarea {
 
 .htotal {
   height: calc(100% - 155px);
+}
+
+.styled-border {
+  border: 4px solid #6B6B6B;
+  border-top-right-radius: 10px;
+  border-bottom: none;
+  border-left: none;
 }
