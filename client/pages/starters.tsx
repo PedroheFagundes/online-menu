@@ -9,7 +9,7 @@ const Starters: NextPage = () => {
   const getProducts = async () => {
     try {
       const response = await fetch(
-        "https://preco-campeao.herokuapp.com/activeitems"
+        "https://online-menu-pedro-fagundes.herokuapp.com/products/get"
       );
       const jsonData = await response.json();
 
