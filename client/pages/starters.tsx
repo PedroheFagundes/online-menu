@@ -26,7 +26,12 @@ const Starters: NextPage = () => {
     getProducts();
   }, []);
 
-  const productShow = allProducts.map((val: any, key: number) => {
+  const productShow = allProducts.map((val: any, key: number, subSection: any) => {
+
+    let previousSubSection = subSection[key - 1];
+    const currentSubSection = subSection[key];
+    let nextSubSection = subSection[key + 1];
+    
     return (
       <div key={key}>{val.name}</div> 
     )
