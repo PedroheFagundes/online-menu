@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 
 const Starters: NextPage = () => {
 	const [products, setProducts] = useState([]);
-	let sameSubSection: any = [];
 
 	const allProducts = products.filter((val: any) => {
 		return val;
@@ -72,7 +71,7 @@ const Starters: NextPage = () => {
 	}, []);
 
 	return (
-		<div className="container-fluid p-0 position-fixed d-flex justify-content-center || bg w414 h100pc">
+		<div className="container-fluid p-0 d-flex justify-content-center || bg w414 h100pc">
 			<div className="col-10 d-flex flex-column || w414 h100pc">
 					<div> {productShow} </div>
 			</div>
