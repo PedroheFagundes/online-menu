@@ -14,8 +14,7 @@ router.get('/get', async (req, res) => {
 				product prod
 				join sub_section sub on
 				prod.sub_section_key = sub.key
-			order by
-				sub_section
+			order by sub_section
 			`
 		);
 		res.json(allProducts.rows);
