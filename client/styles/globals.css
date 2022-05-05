@@ -34,6 +34,11 @@ input, textarea {
   -webkit-appearance: none;
 }
 
+/* Hidden Toolbar */
+::-webkit-scrollbar {
+  width: 0px;
+}
+
 /* Fonts */
 .font-satisfy {
   font-family: 'Satisfy', cursive;

@@ -21,6 +21,8 @@ const Starters: NextPage = () => {
 		}
 	};
 
+	console.log(allProducts);
+
 	const productShow = allProducts.map(
 		(val: any, key: number, subSection: any) => {
 
@@ -33,17 +35,17 @@ const Starters: NextPage = () => {
 			}
 
 			if (nextSubSection === undefined) {
-				nextSubSection = {};
+				nextSubSection = { subSection: ""};
 			}
 
 			return (
 				<>
 				{
-					nextSubSection.sub_section == currentSubSection.sub_section
+					previousSubSection.sub_section != currentSubSection.sub_section
 					? 
 						<>
 						<div className="fs-1 mt-4 fw-bold m-0 || font-inknut">{val.sub_section}</div>
-						<div className="m-0 col-12 || styled-border" />
+						<div className="m-0 col-12 || styled-border"/>
 						</>					
 					: null
 				}
@@ -71,7 +73,7 @@ const Starters: NextPage = () => {
 	}, []);
 
 	return (
-		<div className="container-fluid p-0 d-flex justify-content-center || bg w414 h100pc">
+		<div className="container-fluid p-0 position-fixed d-flex justify-content-center || bg w414 h100pc">
 			<div className="col-10 d-flex flex-column || w414 h100pc">
 					<div> {productShow} </div>
 			</div>

@@ -11,8 +11,8 @@ router.get('/get', async (req, res) => {
 				description,
 				price
 			from
-				product prod
-				join sub_section sub on
+				product_pt prod
+				join sub_section_pt sub on
 				prod.sub_section_key = sub.key
 			order by sub_section
 			`
