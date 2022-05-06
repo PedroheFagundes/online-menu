@@ -11,7 +11,7 @@ const Starters: NextPage = () => {
 	const getProducts = async () => {
 		try {
 		const response = await fetch(
-			"https://online-menu-pedro-fagundes.herokuapp.com/products/get"
+			"https://online-menu-pedro-fagundes.herokuapp.com/products/starters"
 		);
 		const jsonData = await response.json();
 
@@ -37,31 +37,31 @@ const Starters: NextPage = () => {
 			}
 
 			return (
-				<>
-				{
-					previousSubSection.sub_section != currentSubSection.sub_section
-					? 
-						<>
-						<div className="fs-1 mt-4 fw-bold m-0 || font-inknut">{val.sub_section}</div>
-						<div className="m-0 mb-1 col-12 || styled-border"/>
-						</>					
-					: null
-				}
-
 				<div key={key}>
-					<div className="lh-1 fs-5 d-flex direction-column justify-content-between">
-						<div className="fw-bold col-9">
-							{val.name}
+					{
+						previousSubSection.sub_section != currentSubSection.sub_section
+						? 
+							<>
+							<div className="lh-2 fs-1 mt-4 fw-bold m-0 || font-inknut">{val.sub_section}</div>
+							<div className="m-0 mb-2 col-12 || styled-border"/>
+							</>					
+						: null
+					}
+
+					<div>
+						<div className="lh-1 fs-5 d-flex direction-column justify-content-between">
+							<div className="fw-bold col-9">
+								{val.name}
+							</div>
+							<div className="col-3 text-end">
+								{`€ ${val.price}`}
+							</div>
 						</div>
-						<div className="col-3 text-end">
-							{`€ ${val.price}`}
+						<div className="lh-1 col-9 mb-3">
+							{val.description}
 						</div>
-					</div>
-					<div className="lh-1 col-9 mb-3">
-						{val.description}
 					</div>
 				</div>
-				</>
 			);
 		}
 	);
