@@ -74,6 +74,10 @@ input, textarea {
   background-color: #FFD600;
 }
 
+.color-standart {
+  color: #6B6B6B;
+}
+
 /* Heights */
 .h100vh {
   height: calc(100vh - 55px);
@@ -96,6 +100,10 @@ input, textarea {
 }
 
 .h55 {
+  height: 55px;
+}
+
+.h60 {
   height: 55px;
 }
 

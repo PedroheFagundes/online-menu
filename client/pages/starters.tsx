@@ -21,8 +21,6 @@ const Starters: NextPage = () => {
 		}
 	};
 
-	console.log(allProducts);
-
 	const productShow = allProducts.map(
 		(val: any, key: number, subSection: any) => {
 
@@ -52,10 +50,10 @@ const Starters: NextPage = () => {
 
 				<div key={key}>
 					<div className="fs-5 d-flex direction-column justify-content-between">
-						<div className="fw-bold">
+						<div className="fw-bold col-9">
 							{val.name}
 						</div>
-						<div>
+						<div className="col-3 text-end">
 							{`€ ${val.price}`}
 						</div>
 					</div>
@@ -73,9 +71,12 @@ const Starters: NextPage = () => {
 	}, []);
 
 	return (
-		<div className="container-fluid p-0 position-fixed d-flex justify-content-center || bg w414 h100pc">
-			<div className="col-10 d-flex flex-column || w414 h100pc">
+		<div className="container-fluid p-0 position-fixed || bg w414 h100pc">
+			<div className=" d-flex justify-content-center row">
+				<div className="col-11 fw-bold text-center mt-3 || fs40 font-inknut color-standart">Entradas</div>
+				<div className="col-11 d-flex flex-column || w414 h100pc">
 					<div> {productShow} </div>
+				</div>
 			</div>
 		</div>
 	);
