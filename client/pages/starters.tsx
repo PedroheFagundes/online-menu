@@ -43,13 +43,13 @@ const Starters: NextPage = () => {
 					? 
 						<>
 						<div className="fs-1 mt-4 fw-bold m-0 || font-inknut">{val.sub_section}</div>
-						<div className="m-0 col-12 || styled-border"/>
+						<div className="m-0 mb-1 col-12 || styled-border"/>
 						</>					
 					: null
 				}
 
 				<div key={key}>
-					<div className="fs-5 d-flex direction-column justify-content-between">
+					<div className="lh-1 fs-5 d-flex direction-column justify-content-between">
 						<div className="fw-bold col-9">
 							{val.name}
 						</div>
@@ -57,7 +57,7 @@ const Starters: NextPage = () => {
 							{`€ ${val.price}`}
 						</div>
 					</div>
-					<div className="mb-2 || mtn5">
+					<div className="lh-1 col-9 mb-3">
 						{val.description}
 					</div>
 				</div>
@@ -71,7 +71,7 @@ const Starters: NextPage = () => {
 	}, []);
 
 	return (
-		<div className="container-fluid p-0  || bg w414 h100pc">
+		<div className="container-fluid p-0 || bg w414 h100pc">
 			<div className=" d-flex justify-content-center row">
 				<div className="h55" />
 				<div className="col-11 fw-bold text-center mt-3 || fs40 font-inknut color-standart">Entradas</div>
