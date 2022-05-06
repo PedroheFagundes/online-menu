@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router()
 const pool = require("../db");
 
-router.get('/starters', async (res) => {
+router.get('/starters', async (req, res) => {
 	try {
 		const starters = await pool.query(`
 			select
@@ -18,7 +18,6 @@ router.get('/starters', async (res) => {
 				sub.section_id = 1
 			order by
 				sub_section
-
 			`
 		);
 		res.json(starters.rows);
@@ -28,7 +27,7 @@ router.get('/starters', async (res) => {
 	}
 });
 
-router.get('/main-dishes', async (res) => {
+router.get('/main-dishes', async (req, res) => {
 	try {
 		const mainDishes = await pool.query(`
 			select

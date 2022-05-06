@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const Starters: NextPage = () => {
 	const [products, setProducts] = useState([]);
 
-	const allProducts = products.filter((val: any) => {
+	const starters = products.filter((val: any) => {
 		return val;
 	});
 
@@ -21,7 +21,7 @@ const Starters: NextPage = () => {
 		}
 	};
 
-	const productShow = allProducts.map(
+	const productShow = starters.map(
 		(val: any, key: number, subSection: any) => {
 
 			let previousSubSection = subSection[key - 1];
