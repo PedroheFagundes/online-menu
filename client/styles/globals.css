@@ -69,8 +69,16 @@ input, textarea {
   background-color: #FFD600;
 }
 
-.color-standart {
+.color-neutral {
   color: #6B6B6B;
+}
+
+.color-neutral-dark {
+  color: #373737;
+}
+
+.color-standart {
+  color: #FFD600;
 }
 
 /* Font Size */
@@ -109,6 +117,10 @@ input, textarea {
 
 .h100 {
   height: 100px;
+}
+
+.h115 {
+  height: 115px;
 }
 
 /* Positions */

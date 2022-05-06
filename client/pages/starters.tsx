@@ -73,8 +73,7 @@ const Starters: NextPage = () => {
 	return (
 		<div className="container-fluid p-0 || bg w414 h100pc">
 			<div className=" d-flex justify-content-center row">
-				<div className="h55" />
-				<div className="col-11 fw-bold text-center mt-3 || fs40 font-inknut color-standart">Entradas</div>
+				<div className="h115" />
 				<div className="col-11 d-flex flex-column || w414 h100pc">
 					<div> {productShow} </div>
 				</div>
