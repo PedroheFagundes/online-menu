@@ -49,11 +49,6 @@ input, textarea {
   overflow: hidden;
 }
 
-/* Font Size */
-.fs40{
-  font-size: 40px;
-}
-
 /* Backgrounds */
 .bg {
   background-image: url("/bg.png");
@@ -76,6 +71,11 @@ input, textarea {
 
 .color-standart {
   color: #6B6B6B;
+}
+
+/* Font Size */
+.fs40{
+  font-size: 40px;
 }
 
 /* Heights */
@@ -109,6 +109,12 @@ input, textarea {
 
 .h100 {
   height: 100px;
+}
+
+/* Positions */
+
+.z-front {
+  z-index: 1 !important;
 }
 
 /* Widths */
