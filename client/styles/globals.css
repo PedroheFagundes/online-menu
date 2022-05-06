@@ -61,7 +61,11 @@ input, textarea {
 }
 
 /* Colors */
-.bg-standart-dark {
+.bg-neutral {
+  background-color: #6B6B6B;
+}
+
+.bg-neutral-dark {
   background-color: #373737;
 }
 
@@ -113,6 +117,10 @@ input, textarea {
 
 .h60 {
   height: 55px;
+}
+
+.h90 {
+  height: 90px;
 }
 
 .h100 {

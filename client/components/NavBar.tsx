@@ -19,7 +19,7 @@ const NavBar: NextPage = () => {
   }
 
   return (
-    <div className='position-fixed container-fluid d-flex align-items-center justify-content-between p-0 flex-column || z-front bg-standart-dark w414 h115 '>
+    <div className='position-fixed container-fluid d-flex align-items-center justify-content-between p-0 flex-column || z-front bg-neutral-dark w414 h100 '>
         <div className="col-11 mt-2 d-flex align-items-center justify-content-between">
             <Link href="/" passHref>
             <div id='nav-bar-logo' className="position-relative || w152 h40">
@@ -34,7 +34,7 @@ const NavBar: NextPage = () => {
             </Link>
             <div onClick={() => toggleNavBar()} className='m-0 d-flex row || w40 h40'><div className='bg-standart rounded mt-1 || h7'></div><div className='bg-standart rounded || h7'></div><div className='bg-standart rounded || h7'></div></div>
         </div>
-				<div className="col-12 fw-bold text-center || color-standart fs40 font-inknut">Entradas</div>
+				<div className="col-12 fw-bold text-center fs-1 mb-1 || color-standart font-inknut">Entradas</div>
     </div>
   )
 }
