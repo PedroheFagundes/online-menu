@@ -19,7 +19,7 @@ const NavBar: NextPage = () => {
   }
 
   return (
-    <div className='container-fluid d-flex align-items-center justify-content-center p-0 || bg-standart-dark w414 h55 '>
+    <div className='position-fixed container-fluid d-flex align-items-center justify-content-center p-0 || bg-standart-dark w414 h55 '>
         <div className="col-11 d-flex align-items-center justify-content-between">
             <Link href="/" passHref>
             <div id='nav-bar-logo' className="position-relative || w152 h40">
