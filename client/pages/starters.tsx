@@ -4,10 +4,13 @@ import { useEffect, useState } from "react";
 const Starters: NextPage = () => {
 
 	const [products, setProducts] = useState([]);
+	const [sectionName, setSectionName] = useState('');
 
 	const starters = products.filter((val: any) => {
 		return val;
 	});
+
+	console.log(starters)
 
 	const getProducts = async () => {
 		try {
@@ -43,7 +46,7 @@ const Starters: NextPage = () => {
 						previousSubSection.sub_section != currentSubSection.sub_section
 						? 
 							<>
-							<div className="lh-2 fs-1 mt-4 fw-bold m-0 || font-inknut">{val.sub_section}</div>
+							<div className="lh-2 fs-1 mt-4 fw-bold m-0 || font-inknut">{sectionName}</div>
 							<div className="m-0 mb-2 col-12 || styled-border"/>
 							</>					
 						: null

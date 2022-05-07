@@ -6,6 +6,7 @@ router.get('/starters', async (req, res) => {
 	try {
 		const starters = await pool.query(`
 			select
+				sub.section_name,
 				sub.name as sub_section,
 				prod.name,
 				description,
