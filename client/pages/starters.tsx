@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 
 const Starters: NextPage = () => {
+
 	const [products, setProducts] = useState([]);
 
 	const starters = products.filter((val: any) => {
@@ -73,7 +74,8 @@ const Starters: NextPage = () => {
 	return (
 		<div className="container-fluid p-0 || bg w414 h100pc">
 			<div className=" d-flex justify-content-center row">
-				<div className="h100" />
+			<div className="col-12 fw-bold text-center fs-1 position-fixed || top55 color-standart bg-neutral-dark h45 font-inknut">Entradas</div>
+			<div className="h100" />
 				<div className="col-11 d-flex flex-column || w414 h100pc">
 					<div> {productShow} </div>
 				</div>

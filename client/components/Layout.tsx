@@ -8,7 +8,7 @@ interface ChildrenProps {
 
 const Layout: FC <ChildrenProps> = ({ children }) => {
   return (
-    <div className="layout || w100vw">
+    <div className="layout d-flex justify-content-center || w100vw">
         <Head>
           <title>Online Menu - The best way to manage your menu</title>
           <meta name="description" content="With Online Menu you can easily manage your menu daily and present your client with your best." />
