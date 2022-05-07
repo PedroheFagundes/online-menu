@@ -31,6 +31,7 @@ router.get('/main-dishes', async (req, res) => {
 	try {
 		const mainDishes = await pool.query(`
 			select
+				sub.section_name,
 				sub.name as sub_section,
 				prod.name,
 				description,
