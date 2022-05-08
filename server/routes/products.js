@@ -10,7 +10,7 @@ router.get('/starters', async (req, res) => {
 				sub.name as sub_section,
 				prod.name,
 				description,
-				replace (price::text, '.', ',')
+				replace (price::text, '.', ',') as price
 			from
 				product_pt prod
 				join sub_section_pt sub on
@@ -36,7 +36,7 @@ router.get('/main-dishes', async (req, res) => {
 				sub.name as sub_section,
 				prod.name,
 				description,
-				replace (price::text, '.', ',')
+				replace (price::text, '.', ',') as price
 			from
 				product_pt prod
 				join sub_section_pt sub on
