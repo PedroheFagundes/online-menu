@@ -107,6 +107,10 @@ input, textarea {
   height: 7px;
 }
 
+.h30 {
+  height: 30px;
+}
+
 .h40 {
   height: 40px;
 }
@@ -144,6 +148,11 @@ input, textarea {
 /* Widths */
 .w100vw {
   width: 100vw;
+}
+
+.w30 {
+  width: 30px;
+  max-width: 30px;
 }
 
 .w40 {
