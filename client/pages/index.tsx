@@ -11,7 +11,7 @@ const Home: NextPage = () => {
 		<div className='container-fluid p-0 position-fixed d-flex justify-content-center || bg w414 h100pc'>
 			<div className="col-11 d-flex flex-column || h100pc">
 				<div className="h55" />
-				<div className='justify-content-center fw-bold d-flex align-items-center mt-3 || h60'>
+				<div className='justify-content-center fw-bold d-flex align-items-center mt-2 || h60'>
 					<div className="bg-neutral px-2 py-1 d-flex rounded10 align-items-center text-white me-3">
 						<div className='fs-2 fw-bold me-1'>PT</div>
 						<div className="position-relative rounded || w40 h30">
