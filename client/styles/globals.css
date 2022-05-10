@@ -39,9 +39,17 @@ input, textarea {
   width: 0px;
 }
 
+.cursor {
+  cursor: pointer;
+}
+
 /* Fonts */
 .font-satisfy {
   font-family: 'Satisfy', cursive;
+}
+
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
 }
 
 .font-inknut {
@@ -99,6 +107,10 @@ input, textarea {
   height: 20%;
 }
 
+.h23pc {
+  height: 23%;
+}
+
 .h100pc {
   height: 100%;
 }
@@ -135,6 +147,10 @@ input, textarea {
   height: 115px;
 }
 
+.h460 {
+  height: 460px;
+}
+
 /* Positions */
 
 .z-front {
@@ -160,6 +176,11 @@ input, textarea {
   max-width: 40px;
 }
 
+.w55 {
+  width: 55px;
+  max-width: 55px;
+}
+
 .w152 {
   width: 152px;
   max-width: 152px;
@@ -176,8 +197,8 @@ input, textarea {
 }
 
 .w414 {
-  width: 414px;
-  max-width: 414px;
+  width: 414px !important;
+  max-width: 414px !important;
 }
 
 /* Borders */
@@ -195,7 +216,7 @@ input, textarea {
 /* Especific */
 
 .htotal {
-  height: calc(100% - 155px);
+  height: calc(100% - 125px);
 }
 
 .styled-border {

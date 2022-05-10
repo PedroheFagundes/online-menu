@@ -1,9 +1,6 @@
 import type { NextPage } from "next";
-import Link from "next/link";
-import Image from 'next/image'
 import { useEffect, useState } from "react";
 import { useAppContext } from "../context/state";
-import backArrow from '../public/back-arrow.png'
 
 let sectionName: string;
 
@@ -88,19 +85,8 @@ const Starters: NextPage = () => {
 	return (
 		<div className="container-fluid p-0 || bg w414 h100pc">
 			<div className=" d-flex justify-content-center row">
-				<div className="col-12 d-flex fw-bold text-center align-items-center fs-1 position-fixed || top55 color-standart bg-neutral-dark h45 font-inknut">
-					{/* <Link href="/" passHref>
-						<div id='nav-bar-logo' className=" position-relative || w38 h30">
-							<Image
-							src={backArrow}
-							className='cursor'
-							alt="backArrow"
-							layout="fill"
-							objectFit="cover"
-							/>
-						</div>
-					</Link> */}
-					<div className="col-12">
+				<div className="col-12 d-flex fw-bold text-center align-items-center fs-1 position-fixed justify-content-center || w414 top55 color-standart bg-neutral-dark h45 font-inknut">
+					<div>
 						{sectionName}
 					</div>	
 				</div>
