@@ -93,6 +93,11 @@ input, textarea {
   color: #FFD600;
 }
 
+.bg-neutral-opacity20 {
+  color: #373737;
+  opacity: 20%;
+}
+
 /* Font Size */
 .fs40{
   font-size: 40px;
@@ -217,6 +222,10 @@ input, textarea {
 
 .htotal {
   height: calc(100% - 125px);
+}
+
+.hrestante {
+  height: calc(100% - 430px);
 }
 
 .styled-border {
