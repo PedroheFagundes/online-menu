@@ -1,44 +1,67 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import SectionCard from '../components/SectionCard'
-import pt from '../public/pt.png'
-import en from '../public/en.png'
+import ptImage from '../public/pt.png'
+import enImage from '../public/en.png'
+import Link from 'next/link'
+import { serverSideTranslations} from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next'
+import { useRouter } from 'next/router'
 
+export async function getStaticProps({ locale }: any) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+		},
+	};
+}
 
-const Home: NextPage = () => {
+const Home: NextPage = (props) => {
+
+	const { t } = useTranslation();
+
+	 const router = useRouter()
+
+	// const selectedLang = lang => {
+	//   return router.locale === lang ? <CheckSquareOutlined /> : <BorderOutlined />
+	// }
 
 	return (
 		<div className='container-fluid p-0 position-fixed d-flex justify-content-center || bg w414 h100pc'>
 			<div className="col-11 d-flex flex-column || h100pc">
 				<div className="h55" />
 				<div className='justify-content-center fw-bold d-flex align-items-center mt-2 || h60'>
-					<div className="bg-neutral px-2 py-1 d-flex rounded10 align-items-center text-white me-3">
-						<div className='fs-2 fw-bold me-1'>PT</div>
-						<div className="position-relative rounded || w40 h30">
-							<Image
-								src={pt}
-								className='cursor'
-								alt="português"
-								layout="fill"
-								objectFit="cover"
-								/>
+					<Link href={router.pathname} locale="pt" passHref>
+						<div className="bg-neutral px-2 py-1 d-flex rounded10 align-items-center text-white me-3 || cursor">
+							<div className='fs-2 fw-bold me-1'>PT</div>
+							<div className="position-relative rounded || w40 h30">
+								<Image
+									src={ptImage}
+									className='cursor'
+									alt="português"
+									layout="fill"
+									objectFit="cover"
+									/>
+							</div>
 						</div>
-					</div>
-					<div className="bg-neutral px-2 py-1 d-flex rounded10 align-items-center text-white">
-						<div className='fs-2 fw-bold me-1'>EN</div>
-						<div className="position-relative rounded || w40 h30">
-							<Image
-								src={en}
-								className='cursor'
-								alt="português"
-								layout="fill"
-								objectFit="cover"
-								/>
+					</Link>
+					<Link href={router.pathname} locale="en" passHref>
+						<div className="bg-neutral px-2 py-1 d-flex rounded10 align-items-center text-white  || cursor">
+							<div className='fs-2 fw-bold me-1'>EN</div>
+							<div className="position-relative rounded || w40 h30">
+								<Image
+									src={enImage}
+									className='cursor'
+									alt="português"
+									layout="fill"
+									objectFit="cover"
+									/>
+							</div>
 						</div>
-					</div>
+					</Link>
 				</div>
 				<div className="flex-column d-flex justify-content-around || htotal">
-					<SectionCard section='starters' position='start' name='Entradas'/>
+					<SectionCard section='starters' position='start' name={`${t('common:starters')}`}/>
 					<SectionCard section='main-dishes' position='end' name='Pratos Principais'/>
 					<SectionCard section='desserts' position='start' name='Sobremesas'/>
 					<SectionCard section='drinks' position='end' name='Bebidas'/>

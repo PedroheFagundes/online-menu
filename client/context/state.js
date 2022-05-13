@@ -4,9 +4,8 @@ const AppContext = createContext();
 
 export function AppWrapper({ children }) {
   let sharedState = {
-    backArrow: false
+    language: 'pt'
 }
-  
 
   return (
     <AppContext.Provider value={sharedState}>

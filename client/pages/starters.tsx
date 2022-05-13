@@ -46,8 +46,6 @@ const Starters: NextPage = () => {
 
 			sectionName = val.section_name;
 
-
-			{console.log(val.price)}
 			return (
 				<div key={key}>
 					{
