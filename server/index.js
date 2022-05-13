@@ -1,7 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const products = require('./routes/products')
-
+const router = express.Router();
 
 const app = express();
 
@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/ping', async (req, res) => {
+router.get('/ping', async (req, res) => {
 	try {
 		const ping = await pool.query(`
     		select distinct
