@@ -9,16 +9,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/ping', async (req, res) => {
+app.get('/ping', async (req, res) => {
 	try {
-		const starters = await pool.query(`
+		const ping = await pool.query(`
     		select distinct
     			'ping'
 			from
 				product_pt prod
 			`
 		);
-		res.json(starters.rows);
+		res.json(ping.rows);
 	} 
 	catch (err) {
 		console.error(err.message);
