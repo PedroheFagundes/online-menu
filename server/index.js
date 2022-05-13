@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-router.get('/ping', async (req, res) => {
+app.get('/ping', async (req, res) => {
 	try {
 		const ping = await pool.query(`
     		select distinct
