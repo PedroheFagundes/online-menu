@@ -27,7 +27,7 @@ const Home: NextPage = () => {
 	const getPing = async () => {
 		try {
 		const response = await fetch(
-			"https://online-menu-pedro-fagundes.herokuapp.com/ping"
+			"https://online-menu-pedro-fagundes.herokuapp.com/products/ping"
 		);
 		const jsonData = await response.json();
 

@@ -2,6 +2,22 @@ const express = require("express");
 const router = express.Router();
 const pool = require("../db");
 
+router.get('/ping', async (req, res) => {
+	try {
+		const ping = await pool.query(`
+    		select distinct
+    			'ping'
+			from
+				product_pt prod
+			`
+		);
+		res.json(ping.rows);
+	} 
+	catch (err) {
+		console.error(err.message);
+	}
+});
+
 router.get('/starters', async (req, res) => {
 	try {
 		const starters = await pool.query(`

@@ -1,29 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-const products = require('./routes/products')
-const router = express.Router();
+const products = require('./routes/products');
 
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
-
-app.get('/ping', async (req, res) => {
-	try {
-		const ping = await pool.query(`
-    		select distinct
-    			'ping'
-			from
-				product_pt prod
-			`
-		);
-		res.json(ping.rows);
-	} 
-	catch (err) {
-		console.error(err.message);
-	}
-});
 
 app.use('/products', products);
 
