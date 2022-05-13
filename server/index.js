@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-// const pool = require("./db");
 const products = require('./routes/products')
 
 
@@ -10,11 +9,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/', async (req, res) => {
+app.use('/ping', async (req, res) => {
 	try {
 		const starters = await pool.query(`
-			select
-        1 as ping
+    		select distinct
+    			'ping'
 			from
 				product_pt prod
 			`

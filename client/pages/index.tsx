@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 export async function getStaticProps({ locale }: any) {
 	return {
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
 	const getPing = async () => {
 		try {
 		const response = await fetch(
-			"https://online-menu-pedro-fagundes.herokuapp.com/"
+			"https://online-menu-pedro-fagundes.herokuapp.com/ping"
 		);
 		const jsonData = await response.json();
 
@@ -37,6 +37,10 @@ const Home: NextPage = () => {
 		}
 	};
 
+	useEffect(() => {
+		getPing();
+	}, []);
+	
 	console.log(ping);
 
 	return (
