@@ -6,7 +6,7 @@ router.get('/ping', async (req, res) => {
 	try {
 		const ping = await pool.query(`
     		select distinct
-    			'ping'
+    			'ping' as ping
 			from
 				product_pt prod
 			`

@@ -21,7 +21,7 @@ const Home: NextPage = () => {
 
 	const { t } = useTranslation();
 	const router = useRouter();
-	const [ping, setPing] = useState('');
+	const [ping, setPing] = useState([]);
 
 
 	const getPing = async () => {
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
 		getPing();
 	}, []);
 	
-	console.log(ping);
+	console.log(ping[0]);
 
 	return (
 		<div className='container-fluid p-0 position-fixed d-flex justify-content-center || bg w414 h100pc'>
