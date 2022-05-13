@@ -1,15 +1,9 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
-import { useAppContext } from "../context/state";
 
 let sectionName: string;
 
 const Starters: NextPage = () => {
-
-	const mycontext = useAppContext();
-	useEffect(() => {
-		mycontext.backArrow = true;
-	},[])
 
 	const [products, setProducts] = useState([]);
 	const starters = products.filter((val: any) => {

@@ -7,6 +7,7 @@ import Link from 'next/link'
 import { serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
 
 export async function getStaticProps({ locale }: any) {
 	return {
@@ -16,15 +17,27 @@ export async function getStaticProps({ locale }: any) {
 	};
 }
 
-const Home: NextPage = (props) => {
+const Home: NextPage = () => {
 
 	const { t } = useTranslation();
+	const router = useRouter();
+	const [ping, setPing] = useState('');
 
-	 const router = useRouter()
 
-	// const selectedLang = lang => {
-	//   return router.locale === lang ? <CheckSquareOutlined /> : <BorderOutlined />
-	// }
+	const getPing = async () => {
+		try {
+		const response = await fetch(
+			"https://online-menu-pedro-fagundes.herokuapp.com/"
+		);
+		const jsonData = await response.json();
+
+		setPing(jsonData);
+		} catch (err: any) {
+		console.error(err.message);
+		}
+	};
+
+	console.log(ping);
 
 	return (
 		<div className='container-fluid p-0 position-fixed d-flex justify-content-center || bg w414 h100pc'>

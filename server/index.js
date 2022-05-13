@@ -10,6 +10,22 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use('/', router.get('/', async (req, res) => {
+	try {
+		const starters = await pool.query(`
+			select
+        1 as ping
+			from
+				product_pt prod
+			`
+		);
+		res.json(starters.rows);
+	} 
+	catch (err) {
+		console.error(err.message);
+	}
+}))
+
 app.use('/products', products);
 
 //Estabilishing the port
