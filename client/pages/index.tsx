@@ -23,7 +23,6 @@ const Home: NextPage = () => {
 	const router = useRouter();
 	const [ping, setPing] = useState([]);
 
-
 	const getPing = async () => {
 		try {
 		const response = await fetch(
@@ -79,9 +78,9 @@ const Home: NextPage = () => {
 				</div>
 				<div className="flex-column d-flex justify-content-around || htotal">
 					<SectionCard section='starters' position='start' name={`${t('common:starters')}`}/>
-					<SectionCard section='main-dishes' position='end' name='Pratos Principais'/>
-					<SectionCard section='desserts' position='start' name='Sobremesas'/>
-					<SectionCard section='drinks' position='end' name='Bebidas'/>
+					<SectionCard section='main-dishes' position='end' name={`${t('common:main-dishes')}`}/>
+					<SectionCard section='desserts' position='start' name={`${t('common:desserts')}`}/>
+					<SectionCard section='drinks' position='end' name={`${t('common:drinks')}`}/>
 				</div>
 			</div>
 		</div>

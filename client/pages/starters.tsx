@@ -1,10 +1,19 @@
 import type { NextPage } from "next";
 import { useEffect, useState } from "react";
+import { serverSideTranslations} from 'next-i18next/serverSideTranslations';
+import { useTranslation } from 'next-i18next';
 
-let sectionName: string;
+export async function getStaticProps({ locale }: any) {
+	return {
+		props: {
+			...(await serverSideTranslations(locale, ['common'])),
+		},
+	};
+}
 
 const Starters: NextPage = () => {
 
+	const { t } = useTranslation();
 	const [products, setProducts] = useState([]);
 	const starters = products.filter((val: any) => {
 		return val;
@@ -37,8 +46,6 @@ const Starters: NextPage = () => {
 			if (nextSubSection === undefined) {
 				nextSubSection = { subSection: ""};
 			}
-
-			sectionName = val.section_name;
 
 			return (
 				<div key={key}>
@@ -78,9 +85,7 @@ const Starters: NextPage = () => {
 		<div className="container-fluid p-0 || bg w414 h100pc">
 			<div className=" d-flex justify-content-center row">
 				<div className="col-12 d-flex fw-bold text-center align-items-center fs-1 position-fixed justify-content-center || w414 top55 color-standart bg-neutral-dark h45 font-inknut">
-					<div>
-						{sectionName}
-					</div>	
+					<div>{t('common:starters')}</div>	
 				</div>
 			<div className="h100" />
 				<div className="col-11 d-flex flex-column || w414 h100pc">
