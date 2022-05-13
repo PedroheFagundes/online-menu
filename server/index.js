@@ -10,7 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/', router.get('/', async (req, res) => {
+app.use('/', async (req, res) => {
 	try {
 		const starters = await pool.query(`
 			select
@@ -24,7 +24,7 @@ app.use('/', router.get('/', async (req, res) => {
 	catch (err) {
 		console.error(err.message);
 	}
-}))
+});
 
 app.use('/products', products);
 
