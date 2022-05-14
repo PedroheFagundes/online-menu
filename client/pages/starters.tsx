@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useEffect, useState } from "react";
 import { serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
+import { i18n } from "next-i18next";
 
 export async function getStaticProps({ locale }: any) {
 	return {
@@ -22,7 +23,7 @@ const Starters: NextPage = () => {
 	const getProducts = async () => {
 		try {
 		const response = await fetch(
-			"https://online-menu-pedro-fagundes.herokuapp.com/products/starters"
+			`https://online-menu-pedro-fagundes.herokuapp.com/products/starters-${i18n?.language}`
 		);
 		const jsonData = await response.json();
 

@@ -8,7 +8,7 @@ router.get('/ping', async (req, res) => {
     		select distinct
     			'ping' as ping
 			from
-				product_pt prod
+				product_pt
 			`
 		);
 		res.json(ping.rows);
@@ -18,7 +18,7 @@ router.get('/ping', async (req, res) => {
 	}
 });
 
-router.get('/starters', async (req, res) => {
+router.get('/starters-pt', async (req, res) => {
 	try {
 		const starters = await pool.query(`
 			select
