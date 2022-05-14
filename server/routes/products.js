@@ -53,7 +53,7 @@ router.get('/starters-en', async (req, res) => {
 				replace (price::text, '.', ',') as price
 			from
 				product_en prod
-				join sub_section_pt sub on
+				join sub_section_en sub on
 					prod.sub_section_key = sub.key
 			where
 				sub.section_id = 1
